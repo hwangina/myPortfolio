@@ -1,0 +1,452 @@
+@chaerset "UTF-8";
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif, 'Noto Sans KR', sans-serif;
+	font-size: 1em;
+}
+
+/* FIXed it */
+.loading {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	text-align: center;
+	vertical-align: middle;
+	/* line-height: 880px; */
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 3em;
+	font-weight: 900;
+	background-color: #fff;
+	color: #000;
+}
+.scroll_bar {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 9950;
+	padding: 3px 10px;
+	width: 100%;
+	height: 8px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.scroll_bar .sign {
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: #000;
+}
+.skip_nav a {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: -45px;
+	z-index: 9998;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 14px;
+	background-color: #eaeaea;
+	color: #4f4f4f;
+}
+
+/* header */
+#header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9950;
+	padding: 23px 44px;
+	width: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	box-sizing: border-box;
+}
+#header .logo {
+	float: left;
+}
+#header .logo img{
+	width: 50px;
+}
+#header #GNB {
+	float: right;
+	margin-right: 20px;
+	text-transform: uppercase;
+}
+#header #GNB > ul > li {
+	display: inline-block;
+}
+#header #GNB > ul > li > a {
+	display: block;
+	margin-left: 30px;
+	line-height: 50px;
+	font-size: 1em;
+	font-weight: 500;
+}
+#header #GNB > ul > li:hover > a,
+#header #GNB > ul > li.active > a {
+	text-decoration: line-through;
+}
+#header #GNB > ul > li:first-child > a {
+	margin-left: 0;
+}
+
+/* CONTENT setting */
+section.content {
+	float: left;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+section.content .ready {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+section.content .inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	box-sizing: border-box;
+}
+
+/* MAIN */
+/* HOME */
+#home {
+	overflow: hidden;
+}
+#home .inner {
+	padding: 45px;
+}
+#home .title {
+	position: absolute;
+	top: 45%;
+	width: 50%;
+	font-family: 'Fira Sans', sans-serif;
+}
+#home .title h2{
+	font-size: 5.125em;
+	font-weight: 900;
+}
+#home .title .job {
+	margin-left: 20px;
+	margin-top: 25px;
+	font-size: 1.25em;
+	line-height: 28px;
+	font-weight: 900;
+}
+#home .title .etc {
+	margin-left: 20px;
+	margin-top: 18px;
+	line-height: 24px;
+	font-size: 0.875em;
+	font-weight: 400;
+}
+#home .pls_scroll {
+	position: absolute;
+	top: 50%;
+	right: 45px;
+	margin-top: -20px;
+	animation: scroll 2s linear infinite;
+}
+#home .pls_scroll p {
+	display: inline-block;
+	margin-right: 10px;
+	line-height: 40px;
+	font-size: 0.75em;
+	color: #fff;
+	vertical-align: top;
+}
+#home .pls_scroll img {
+	width: 28px;
+	vertical-align: top;
+}
+#home video {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	z-index: -1;
+}
+
+/* CONTENTS */
+/* ABOUT */
+#about {
+}
+#about .preview {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 23%;
+	width: 190px;
+	height: 38px;
+	overflow: hidden;
+	text-align: center;
+}
+#about .preview span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 38px;
+	line-height: 38px;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2.375em;
+	font-weight: 800;
+	font-style: italic;
+	text-transform: uppercase;
+	color: #000;
+}
+/*inner*/
+#about .inner { /* poaition: relative; */
+	padding: 45px;
+	padding-left: 0;
+	padding-bottom: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+	background: url(../images/info_background.png) no-repeat center bottom;
+	background-size: 100% auto;
+}
+#about .face {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 45%;
+	opacity: 0.4;
+	z-index: -1;
+}
+#about .title {
+	position: relative;
+	width: 485px;
+	margin-left: 490px;
+	margin-top: 120px;
+}
+#about .title h3 {
+	display: inline;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 6.25em;
+	font-weight: 900;
+	font-style: italic;
+	text-transform: uppercase;
+}
+#about .title p {
+	margin-top: -15px;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2em;
+	font-weight: 300;
+	font-style: italic;
+	text-align: right;
+}
+#about .content {
+	float: right;
+	width: 60%;
+	padding: 20px;
+	margin-top: 85px;
+	box-sizing: border-box;
+}
+#about .content .left_area {
+	float: left;
+	width: 45%;
+}
+#about .content .skill {
+	float: right;
+	width: 55%;
+}
+#about .content .carrer {
+	margin-top: 30px;
+}
+#about .content div h5 { /* content title */
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.563em;
+	line-height: 36px;
+	font-weight: 900;
+	font-style: italic;
+	text-transform: uppercase;
+}
+#about .content ul{ /* content sub */
+	display: inline-block;
+	width: 100%;
+	margin-left: 20px;
+	margin-top: 10px;
+	line-height: 36px;
+	font-size: 1em;
+}
+#about .content .skill ul li {
+	display: block;
+	margin-bottom: 14px;
+	padding: 10px;
+	width: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.75;
+	font-weight: 500;
+}
+#about .content .skill ul li div { /* scroll bar */
+	position: relative;
+	width: 80%;
+	height: 10px;
+	background-color: #eaeaea;
+}
+#about .content .skill ul li div span { /* fill */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #ff715b;
+}
+#about .content .skill ul li.html div span {
+	width: 95%;
+} 
+#about .content .skill ul li.css div span {
+	width: 85%;
+} 
+#about .content .skill ul li.jquery div span {
+	width: 80%;
+}
+/* WORK */
+#work .inner {
+	padding: 0;
+	overflow: hidden;
+}
+#work .working {
+	float: left;
+	position: relative;
+	width: 33.33%;
+	height: 100%;
+	box-sizing: border-box;
+}
+#work .working.first {
+	background: url(../images/work1.jpg) no-repeat center center;
+	background-size: cover;
+}
+#work .working.second {
+	background: url(../images/work2.jpg) no-repeat center center;
+	background-size: cover;
+}
+#work .working.third {
+	background: url(../images/work3.jpg) no-repeat left center;
+	background-size: cover;
+}
+#work .pre_pop {
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	padding-top: 50px;
+	width: 100%;
+	height: 40%;
+	background: url(../images/skill_background_01.png) no-repeat 0 bottom;
+	background-size: 100% auto;
+	background-color: rgba(0,0,0,0.9);
+	font-family: 'Fira Sans', sans-serif;
+	text-align: center;
+	box-sizing: border-box;
+}
+#work .second .pre_pop {
+	background: url(../images/skill_background_02.png) no-repeat 0 bottom;
+	background-size: 100% auto;
+	background-color: rgba(0,0,0,0.9);
+}
+#work .third .pre_pop {
+	background: url(../images/skill_background_03.png) no-repeat 0 bottom;
+	background-size: 100% auto;
+	background-color: rgba(0,0,0,0.9);
+}
+#work .pre_pop h5 {
+	font-size: 3.875em;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
+}
+#work .pre_pop .more {
+	display: block;
+	margin: 40px auto 0; 
+	width: 280px;
+	line-height: 72px;
+	font-size: 1.563em;
+	font-style: italic;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+#work .pre_pop .more:hover {
+	background-color: #fff;
+	color: #000;
+}
+#work .popup {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50px;
+	bottom: 50px;
+	margin-left: -600px;
+	width: 1200px;
+	z-index: 9997;
+	background-color: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+#work .popup .close {
+	display: block;
+	position: fixed;
+	top: 17px;
+	right: 80px;
+	width: 33px;
+	height: 33px;
+	background: url(../images/close.png) no-repeat 50% 50%;
+	background-size: 75%;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+/* dim */
+.dim {
+	display: none;
+	position: fixed;
+	left: 0; top: 0; right: 0; bottom: 0;
+	z-index: 9990;
+	background-color: #444;
+	opacity: 0.5;
+}
+
+@keyframes scroll {
+	0% { opacity: 1; }
+	20% { opacity: 0; }
+	35% { opacity: 1; }
+	100% { opacity: 1; }
+}
+/*
+@media only screen and (max-width:1480px){
+	#about .face {
+		width: 55%;
+	}
+	
+}
+@media only screen and (max-width:1180px){
+	#about .face {
+		width: 60%;
+	}
+	
+}
+@media only screen and (max-width:640px){
+	body {
+		height: auto;
+		overflow-X: hidden;
+		overflow-Y: scroll; 
+	}
+	section.content {
+		float: none;
+	}
+	
+	#about .face {
+		width: 100%;
+	}
+}
+*/
