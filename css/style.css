@@ -308,6 +308,13 @@ section.content .inner {
 #about .content .skill ul li.jquery div span {
 	width: 80%;
 }
+#about .content .skill ul li.photoshop div span {
+	width: 95%;
+}
+
+#about .content .skill ul li.illustrator div span {
+	width: 90%;
+}
 /* WORK */
 #work .inner {
 	padding: 0;
